@@ -1,16 +1,16 @@
 title:              André Ketter Jr. Portfolio
 email:              andreketterjr@gmail.com
 description:        A portfolio of my most recent coding projects
-author:             Andre Ketter
+author:             Andre Ketter Jr.
 baseurl:            ""
 url:                "https://aketterjr.github.io"
 
 # Social Profiles
-twitter_username:   SBootstrap
+twitter_username:   
 github_username:    StartBootstrap
-facebook_username:  StartBootstrap
+facebook_username:  
 instagram_username:  
-linkedin_username:
+linkedin_username:  andreketterjr
 
 # Add your google-analytics ID here to activate google analytics
 google_analytics:   UA-XXXXXXXXX-X # out your google-analytics code

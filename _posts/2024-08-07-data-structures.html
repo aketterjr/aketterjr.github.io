@@ -1,0 +1,40 @@
+---
+layout: post
+title: "C++ Search Engine"
+subtitle: "A project utilizing Data Structures and Algorithms"
+date: 2024-08-07
+background: '/img/posts/06.jpg'
+---
+
+<p>For this project, I constructed a search engine to find strings in text files utilizing C++. The program had to parse through text files, index the words and authors of the files into an AVL Tree, and search through the tree to locate files that the user searches for. By completing this project I gained valuable skills in Data Structures, Search Algorithms, Communication, and Teamwork.</p>
+
+<h2 class="section-heading">Overview</h2>
+
+<p>When the program first loads, the user is presented with the User Interface, where they can choose between various options.</p>
+
+<img class="img-fluid" src="/img/supersearch-ui.gif" alt="supersearch-ui">
+<span class="caption text-muted">Calling the supersearch function and loading the User Interface</span>
+
+<p>The user has 3 choices they can make:</p>
+<ol>
+    <li>The user can upload text files to be indexed by the program. This is the first step if the program has never been run before, otherwise it will regenerate an AVL Tree from the last index it saved (as pictured above).</li>
+    <li>An index the user has created can be removed. This should be done if the user wishes to delete the index they have already created.</li>
+    <li>Lastly is the option to search the index, which is the main functionality of the program. The string that the user enters in will be used to find any files containing that keyword, as well as the amount of times that word appears in the articles (word count).</li>
+</ol>
+
+<h2 class="section-heading">Creating an Index</h2>
+
+<p></p>
+
+<img class="img-fluid" src="/img/supersearch-index.gif" alt="supersearch-index">
+<span class="caption text-muted">Uploading an index using the files in the "sample_data" folder</span>
+<!--<blockquote class="blockquote">The dreams of yesterday are the hopes of today and the reality of tomorrow. Science has not yet mastered prophecy. We predict too much for the next year and yet far too little for the next ten.</blockquote> -->
+
+<h2 class="section-heading">Searching Through Files</h2>
+
+<p></p>
+
+<img class="img-fluid" src="/img/supersearch.gif" alt="supersearch">
+<span class="caption text-muted">Using the search function to find articles containing the word "german".</span>
+
+<!-- <p>Placeholder text by <a href="http://spaceipsum.com/">Space Ipsum</a>. Photographs by <a href="https://unsplash.com/">Unsplash</a>.</p> -->
