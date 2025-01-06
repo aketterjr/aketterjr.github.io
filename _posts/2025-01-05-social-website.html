@@ -1,0 +1,57 @@
+---
+layout: post
+title: "Social Book Reading Website"
+subtitle: "Combining Django, React, and AWS to Create a Scalable Book-Reading Community"
+date: 2025-01-05
+background: '/img/library.png'
+---
+<p>In my free time I enjoy drawing and reading comics and novels, and am currently working on some stories of my own. These hobbies have inspired me to make a publishing company where authors from diverse backgrounds can come together and share their stories with a broader audience. This vision is the foundation of my website and what I am striving to achieve through this project.</p>
+
+<h2>Technical Details</h2>
+
+<h3>Backend, Django REST Framework:</h3>
+    <p>The backend leverages Django for its rapid development capabilities and modular structure. Django's <b>batteries included</b> design philosophy has enabled me to quickly implement features such as user <b>login</b> and <b>registration</b>, as well as staff accounts and moderation using the <b>Django Admin panel</b>.</p>
+    <img class="img-fluid" src="/img/Screenshot 2025-01-05 141814.png" alt="django-admin" width="800" height="800">
+    <span class="caption text-muted">Djagno Admin Panel</span>
+    <img class="img-fluid" src="/img/Screenshot 2025-01-05 142514.png" alt="django-login" width="500" height="500">
+    <span class="caption text-muted">The Login Page</span>
+    <p>In addition to this, I have utilized Django's <b>Object Relational Mapping (ORM)</b> to interact with a <b>Relational (SQLite) Database</b> during development. Here's a look at some of the models I have created:</p>
+    <h4>Models:</h4>
+    <ul>
+        <li><b>Books:</b> Tracks book details such as title, author and genre. Fields such as author use a Django <b>ForeignKey</b> to represent their <b>Many-to-One</b> (many books to one author) relationship, while fields such as genre use a <b>Many-To-Many</b> relationship (many genres for one book, and many books for each genre).</li>
+        <img class="img-fluid" src="/img/Screenshot 2025-01-05 145727.png" alt="book-model" width="800" height="800">
+        <span class="caption text-muted">My Book Model</span>
+        <li><b>Posts:</b> Includes user generated content tied to discussion threads and topics. Also includes comments which are a <b>Many-To-One</b> relationship (many comments to one post).</li>
+        <img class="img-fluid" src="/img/Screenshot 2025-01-05 144301.png" alt="post-model" width="800" height="800">
+        <span class="caption text-muted">My Post and Comment Models</span>
+    </ul>
+    <h4>Serializers and Views:</h4>
+    <p>In addition to this I have worked on <b>Serializers</b> which organize data into JSON for communication with the frontend. Furthermore, I have built <b>Django Views</b>, which are API endpoints that can be called by the front end.</p>
+    <ul>
+        <li><b>Post and Book Serializers:</b> Designed to Handle post objects, the post serializer formats data fields such as id, title, content, created_at (date and time), and author for API responses. The book serializer similarly includes fields needed by the front end.</li>
+        <img class="img-fluid" src="/img/Screenshot 2025-01-05 150841.png" alt="book-model" width="800" height="800">
+        <li><b>Post Create View:</b> This view is a <b>REST API endpoint</b> that creates a post in the database. It checks that the user is logged in using the <b>[IsAuthenticated]</b> permission class, then saves the data in the request using the Django <b>.save()</b> method.</li>
+        <img class="img-fluid" src="/img/Screenshot 2025-01-05 150919.png" alt="post-model" width="800" height="800">
+    </ul>
+<h3>Frontend, React.js:</h3>
+    <p>For the frontend I am utilizing <b>React.js</b> to build dynamic user interfaces. So far I have successfully integrated my Django API using <b>Axios</b>, allowing for seamless communication between the frontend and backend.</p>
+    <p>One feature I'm currently refining is the <b>Carousel</b> on the homepage. While implementing it I ran into an issue where, after displaying the last component, the Carousel jumps all the way back to the first element. This is quite abrupt, and I think it would be better if it faded out, then faded back in with the first element. That is one of the things I am currently working on, as well as adding images for each book to make the user interface more appealing.</p>
+    <img class="img-fluid" src="/img/home-page.gif" alt="carousel" width="800" height="800">
+    <span class="caption text-muted">The current implementation of the Carousel (book names are placeholders from public domain books)</span>
+    <p>I have a simple user interface for the posts feature, which shows all posts that have been made on the website. Instead, I want to organize the posts into forums enabling easier navigation. Lastly, I am refactoring the front end so that the user can only see the <b>delete button</b> for posts that they have made.</p>
+    <img class="img-fluid" src="/img/Screenshot 2025-01-05 155133.png" alt="posts" width="800" height="800">
+    <span class="caption text-muted">Post view page</span>
+<h2>Lessons Learned:</h2>
+
+<p>As I develop this project, I have learned valuable lessons in full-stack development and project management. On the technical side, I've deepened my knowledge of Django's powerful features by integrating these into a functional web application. This has taught me how to effectively design data models and work with complex data relationships, such as <b>Many-to-Many</b> and <b>Many-to-One.</b></p>
+<p>Frontend development with React.js has been a rewarding challenge, especially when managing asynchronous data via <b>Axios.</b> One key lesson has been the importance of creating smooth and intuitive user interfaces, as I continue to refine features like the <b>carousel</b> and the post orgnaization system. I am learning to refine both functionality and user experience.</p>
+
+<h2>Next Steps:</h2>
+
+<ul>
+    <li>Update Carousel functionality</li>
+    <li>Refactor delete button (only delete what you have posted)</li>
+    <li>Add book images and author accounts</li>
+</ul>
+
+<p>Check out my <a href="https://github.com/aketterjr/web-project">GitHub repository</a> to see more.</p>
